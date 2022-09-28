@@ -9,7 +9,11 @@ def scnPortsWThreads(port1):
 	a_socket.settimeout(0.5)
 	result_of_check = a_socket.connect_ex((ipTGT, port1))
 	if result_of_check == 0:
-		print("Open: "+ str(port1))
+		try:
+			serviceName = socket.getservbyport(port1, "TCP");
+			print("Open: %d : %s" %(port1, serviceName))
+		except:
+			print("Open: %d"%port1)
 	a_socket.close()
 
 # Append all the ports in the range to rangeLstPorts Array
