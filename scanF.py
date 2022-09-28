@@ -47,7 +47,7 @@ def arrayCheckAndRun(arr):
 			t2.start()
 			halfArr+=1
 
-IMPPorts = [5, 18, 20, 21, 22, 23, 25, 26, 49, 53, 80, 123, 179, 443, 500, 3389] #Array of Well Known ports
+IMPPorts = [1, 5, 7, 18, 20, 21, 22, 23, 25, 26, 29, 43, 49, 53, 80, 115, 123, 143, 156, 179, 443, 444, 445, 500, 546, 547, 1080, 3389] #Array of Well Known ports
 
 try:
 	#ipTGT = '137.74.187.104' example 1
@@ -67,5 +67,3 @@ try:
 		
 except:
 	print("Something Went wrong - try again!")
-
-
