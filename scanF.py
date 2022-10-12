@@ -6,7 +6,7 @@ import threading
 # Output - prints open ports
 def scnPortsWThreads(port1):
 	a_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	a_socket.settimeout(0.6)
+	a_socket.settimeout(0.5)
 	result_of_check = a_socket.connect_ex((ipTGT, port1))
 	if result_of_check == 0:
 		try:
