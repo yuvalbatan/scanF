@@ -65,8 +65,6 @@ try:
 
 ''')
 
-
-	#ipTGT = '137.74.187.104' example 1
 	ipTGT = input("Welcome To scanF - We Are Scanning TCP Ports With Multi Threading Method For Extra Speed\nWhat Is The Target IP?\n")
 	options = input("What Option Would You Like?\n-w - Well Known Ports\n-r - Range (Big Range Mean More Time - we recommended max range of 6000 ports)\n-a - All ports\n")
 	
