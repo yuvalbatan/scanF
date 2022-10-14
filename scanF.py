@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import socket
 import threading
 
@@ -51,12 +53,28 @@ def arrayCheckAndRun(arr):
 IMPPorts = [1, 5, 7, 18, 20, 21, 22, 23, 25, 26, 29, 43, 49, 53, 80, 115, 123, 143, 156, 179, 443, 444, 445, 500, 546, 547, 1080, 3389]
 
 try:
+	print('''
+------------ ------------    ------    ----    ---- ------------ 
+************ ************   ********   *****   **** ************ 
+----         ---           ----------  ------  ---- ----         
+************ ***          ****    **** ************ ************ 
+------------ ---          ------------ ------------ ------------ 
+       ***** ***          ************ ****  ****** ****         
+------------ ------------ ----    ---- ----   ----- ----         
+************ ************ ****    **** ****    **** ****         
+
+''')
+
+
 	#ipTGT = '137.74.187.104' example 1
 	ipTGT = input("Welcome To scanF - We Are Scanning TCP Ports With Multi Threading Method For Extra Speed\nWhat Is The Target IP?\n")
 	options = input("What Option Would You Like?\n-w - Well Known Ports\n-r - Range (Big Range Mean More Time - we recommended max range of 6000 ports)\n-a - All ports\n")
 	
+	print("-" * 33)
+	print("Scanning Target: %s" %(ipTGT))
+	print("-" * 33)
+
 	if options=="-w": # Well known ports
-		print("\nChecking For Open Well Known Ports - On IP: %s" %(str(ipTGT)))
 		arrayCheckAndRun(IMPPorts)
 					
 	elif options=="-r": # Range of ports
@@ -64,11 +82,9 @@ try:
 		highPort = int(input("Enter Port Number You want to scan To (Higher Port Number):\n"))
 		if lowPort>0 and lowPort<65535 and highPort<= 65535 and highPort>0 and lowPort!=highPort:
 			rangeLstPorts = append2PortLst(lowPort, highPort)
-			print("\nChecking For Open Ports Between The Range - On IP: %s" %(str(ipTGT)))
 			arrayCheckAndRun(rangeLstPorts)
 	
 	elif options=="-a": # All ports
-		print("\nChecking For All Open Ports In Range Of 1 - 65,535 - On IP: %s" %(str(ipTGT)))
 		arrInArr = []
 		sumF = 1
 		sumL = 5461
@@ -89,4 +105,4 @@ try:
 			arrayCheckAndRun(arr)
 		
 except:
-	print("Something Went wrong - try again!")
+	print("Something Went Wrong - Please Try Again!")
