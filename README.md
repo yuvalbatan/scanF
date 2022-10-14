@@ -5,7 +5,7 @@
 
 ### Introduction
 ScanF is a port scanner which using Multithreading for extra speed.
-This tool have 3 different options of scanning, by the necessity.
+This tool have 3 different options of scanning, by necessity.
 It will show the user the open ports on the target ip very quickly.
 This tool is user friendly and very easy to use.
 
