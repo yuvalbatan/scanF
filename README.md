@@ -11,8 +11,13 @@ This tool is user friendly and very easy to use.
 
 ### Features
 * -w - scan Well Known ports. (fast scan)
+![image](https://user-images.githubusercontent.com/114166939/195919843-fd42134a-f17d-4d59-91a0-f447a22d9472.png)
+
 * -r - scan ports on selected range.
+![image](https://user-images.githubusercontent.com/114166939/195920277-cf0b849d-c1a3-4c27-86ad-3cb4922f650e.png)
+
 * -a - scan all ports - 1 to 65,535. (this method is slower)
+![image](https://user-images.githubusercontent.com/114166939/195920633-3b50f296-4525-4e93-a605-87307304c178.png)
 
 ### Python libraries
 * socket.
@@ -26,6 +31,5 @@ This tool is user friendly and very easy to use.
 * Run the tool by using the command: "sudo python3 scanf.py".
 ![image](https://user-images.githubusercontent.com/114166939/195914876-ea568ac3-8da6-434d-9842-84b8452d33b2.png)
 * Enter the target ip and choose the option.
-![image](https://user-images.githubusercontent.com/114166939/195915700-2e6cfd49-d881-4dcb-bd19-6aaf468aa266.png)
 
 *** The tool built for legal purposes like studying and bug bounty only! 
