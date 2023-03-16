@@ -36,4 +36,4 @@ This tool is user friendly and very easy to use.
 ![image](https://user-images.githubusercontent.com/114166939/195914876-ea568ac3-8da6-434d-9842-84b8452d33b2.png)
 * Enter the target ip and choose the option.
 
-*** The tool built for studying purposes only! 
+*** The tool built for studying and CTF purposes only! 
