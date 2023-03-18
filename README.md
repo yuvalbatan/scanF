@@ -32,6 +32,7 @@ This tool is user friendly and very easy to use.
   Guide: https://docs.github.com/repositories/creating-and-managing-repositories/cloning-a-repository?platform=linux
 * Enter to the location of the repository.
 * For Linux users - give a premission to run by using the command:
+
 '''bash
 sudo chmod +x scanf.py
 '''
