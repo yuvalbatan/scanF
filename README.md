@@ -33,14 +33,14 @@ This tool is user friendly and very easy to use.
 * Enter to the location of the repository.
 * For Linux users - give a premission to run by using the command:
 
-'''bash
+```bash
 sudo chmod +x scanf.py
-'''
+```
 
 * Run the tool by using the command:
-'''bash
+```bash
 sudo python3 scanf.py
-'''
+```
 
 ![image](https://user-images.githubusercontent.com/114166939/195914876-ea568ac3-8da6-434d-9842-84b8452d33b2.png)
 * Enter the target ip and choose the option.
