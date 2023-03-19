@@ -14,9 +14,19 @@ This tool is user friendly and very easy to use.
 * threading.
 
 ### How To Use
+* It's better use this tool on a Windows OS because of an interfacing matters in some of the Linux OS versions.
 * Clone the repository to your computer.
   Guide: https://docs.github.com/repositories/creating-and-managing-repositories/cloning-a-repository?platform=linux
 * Enter to the location of the repository.
+```bash
+cd scanF
+```
+
+* For Windows users - run:
+
+```bash
+python3 scanF.py
+```
 * For Linux users - give a premission to run by using the command:
 
 ```bash
