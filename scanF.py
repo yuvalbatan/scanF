@@ -15,7 +15,7 @@ def validIP(ipTGT1):
 # Input - port number to check
 # Output - prints open ports
 def scnPortsWThreads(port1):
-	a_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	a_socket = socket.socket()
 	a_socket.settimeout(0.5)
 	result_of_check = a_socket.connect_ex((ipTGT, port1))
 	if result_of_check == 0:
@@ -61,8 +61,8 @@ def arrayCheckAndRun(arr):
 IMPPorts = [1, 5, 7, 18, 20, 21, 22, 23, 25, 26, 29, 43, 49, 53, 80, 115, 123, 143, 156, 179, 443, 444, 445, 500, 546, 547, 1080, 3389]
 
 try:
-	if __name__ == '__main__':
-		print('''
+	
+	print('''
 	------------ ------------    ------    ----    ---- ------------ 
 	************ ************   ********   *****   **** ************ 
 	----         ---           ----------  ------  ---- ----         
@@ -74,48 +74,48 @@ try:
 
 	''')
 
-		ipTGT = input("Welcome To scanF - We Are Scanning TCP Ports With Multi Threading Method For Extra Speed\nWhat Is The Target IP?\n")
-		while True:
-			valid12 = validIP(ipTGT)
-			if valid12 == True:
-				break
-			ipTGT = input("Please enter valid IP:\n")
-			
-		options = input("What Option Would You Like?\n-w - Well Known Ports\n-r - Range (Big Range Mean More Time - we recommended max range of 6000 ports)\n-a - All ports\n")
+	ipTGT = input("Welcome To scanF - We Are Scanning TCP Ports With Multi Threading Method For Extra Speed\nWhat Is The Target IP?\n")
+	while True:
+		valid12 = validIP(ipTGT)
+		if valid12 == True:
+			break
+		ipTGT = input("Please enter valid IP:\n")
 		
-		print("-" * 33)
-		print("Scanning Target: %s" %(ipTGT))
-		print("-" * 33)
+	options = input("What Option Would You Like?\n-w - Well Known Ports\n-r - Range (Big Range Mean More Time - we recommended max range of 6000 ports)\n-a - All ports\n")
+	
+	print("-" * 33)
+	print("Scanning Target: %s" %(ipTGT))
+	print("-" * 33)
 
-		if options=="-w": # Well known ports
-			arrayCheckAndRun(IMPPorts)
-						
-		elif options=="-r": # Range of ports
-			lowPort = int(input("Enter Port Number You want to scan From (Lower Port Number):\n"))		
-			highPort = int(input("Enter Port Number You want to scan To (Higher Port Number):\n"))
-			if lowPort>0 and lowPort<65535 and highPort<= 65535 and highPort>0 and lowPort!=highPort:
-				rangeLstPorts = append2PortLst(lowPort, highPort)
-				arrayCheckAndRun(rangeLstPorts)
-		
-		elif options=="-a": # All ports
-			arrInArr = []
-			sumF = 1
-			sumL = 5461
-			for i in range(12):
-				if i==10:
-					arrC = append2PortLst(sumF, sumL)
-					arrInArr.append(arrC)
-					sumF = sumL+1
-					ch = 65535-sumL
-					sumL +=ch
-				else:
-					arrC = append2PortLst(sumF, sumL)
-					arrInArr.append(arrC)
-					sumF = sumL+1
-					sumL +=5461
+	if options=="-w": # Well known ports
+		arrayCheckAndRun(IMPPorts)
+					
+	elif options=="-r": # Range of ports
+		lowPort = int(input("Enter Port Number You want to scan From (Lower Port Number):\n"))		
+		highPort = int(input("Enter Port Number You want to scan To (Higher Port Number):\n"))
+		if lowPort>0 and lowPort<65535 and highPort<= 65535 and highPort>0 and lowPort!=highPort:
+			rangeLstPorts = append2PortLst(lowPort, highPort)
+			arrayCheckAndRun(rangeLstPorts)
+	
+	elif options=="-a": # All ports
+		arrInArr = []
+		sumF = 1
+		sumL = 5461
+		for i in range(12):
+			if i==10:
+				arrC = append2PortLst(sumF, sumL)
+				arrInArr.append(arrC)
+				sumF = sumL+1
+				ch = 65535-sumL
+				sumL +=ch
+			else:
+				arrC = append2PortLst(sumF, sumL)
+				arrInArr.append(arrC)
+				sumF = sumL+1
+				sumL +=5461
 
-			for arr in arrInArr:
-				arrayCheckAndRun(arr)
+		for arr in arrInArr:
+			arrayCheckAndRun(arr)
 		
 except:
 	print("Something Went Wrong - Please Try Again!")
