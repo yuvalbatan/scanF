@@ -2,6 +2,14 @@
 
 import socket
 import threading
+import ipaddress
+
+def validIP(ipTGT1):
+	try:
+		ipaddress.ip_address(str(ipTGT1))
+		return True
+	except:
+		return False
 
 # Open a socket and checking if the TCP port is open
 # Input - port number to check
@@ -67,6 +75,12 @@ try:
 	''')
 
 		ipTGT = input("Welcome To scanF - We Are Scanning TCP Ports With Multi Threading Method For Extra Speed\nWhat Is The Target IP?\n")
+		while True:
+			valid12 = validIP(ipTGT)
+			if valid12 == True:
+				break
+			ipTGT = input("Please enter valid IP:\n")
+			
 		options = input("What Option Would You Like?\n-w - Well Known Ports\n-r - Range (Big Range Mean More Time - we recommended max range of 6000 ports)\n-a - All ports\n")
 		
 		print("-" * 33)
