@@ -9,6 +9,28 @@ This tool have 3 different options of scanning, by necessity.
 It will show the user open ports on the target ip very quickly.
 This tool is user friendly and very easy to use.
 
+### Python libraries
+* socket.
+* threading.
+
+### How To Use
+* Clone the repository to your computer.
+  Guide: https://docs.github.com/repositories/creating-and-managing-repositories/cloning-a-repository?platform=linux
+* Enter to the location of the repository.
+* For Linux users - give a premission to run by using the command:
+
+```bash
+sudo chmod +x scanf.py
+```
+
+* Run the tool by using the command:
+```bash
+sudo python3 scanf.py
+```
+
+![image](https://user-images.githubusercontent.com/114166939/195914876-ea568ac3-8da6-434d-9842-84b8452d33b2.png)
+* Enter the target ip and choose the option.
+
 ### Features
 * -w - scan Well Known ports. (fast scan)
 
@@ -23,17 +45,5 @@ This tool is user friendly and very easy to use.
  
 ![image](https://user-images.githubusercontent.com/114166939/195920633-3b50f296-4525-4e93-a605-87307304c178.png)
 
-### Python libraries
-* socket.
-* threading.
-
-### How To Use
-* Clone the repository to your computer.
-  Guide: https://docs.github.com/repositories/creating-and-managing-repositories/cloning-a-repository?platform=linux
-* Enter to the location of the repository.
-* For Linux users - give a premission to run by using the command: "sudo chmod +x scanf.py".
-* Run the tool by using the command: "sudo python3 scanf.py".
-![image](https://user-images.githubusercontent.com/114166939/195914876-ea568ac3-8da6-434d-9842-84b8452d33b2.png)
-* Enter the target ip and choose the option.
 
 *** The tool built for studying and CTF purposes only! 
